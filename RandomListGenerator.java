@@ -1,6 +1,26 @@
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class RandomListGenerator{
+    public static List<Integer> generateRandomList(int size, int min, int max) {
+        if (size < 0) {
+            throw new IllegalArgumentException("Size must be non-negative.");
+        }
+        if (min > max) {
+            throw new IllegalArgumentException("Minimum value cannot be greater than maximum value.");
+        }
+
+        List<Integer> randomList = new ArrayList<>();
+        Random random = new Random();
+
+        for (int i = 0; i < size; i++) {
+            int randomNumber = random.nextInt(max - min + 1) + min; // Generate random number in range [min, max]
+            randomList.add(randomNumber);
+        }
+
+        return randomList;
+    }
     public static void main(String[] args) {
         int size = 10; // Specify the size of the list
         int min = 1;   // Minimum value for the random integers
