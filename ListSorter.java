@@ -3,7 +3,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class ListSorter {
-        public static List<Integer> sortListAscending(List<Integer> numbers) {
+    /**
+     * Sorts a list of integers in ascending order.
+     * 
+     * @param numbers The list of integers to sort.
+     * @return A new list with integers sorted in ascending order.
+     */
+    public static List<Integer> sortListAscending(List<Integer> numbers) {
             List<Integer> sortedList = new ArrayList<>(numbers); // Create a copy to avoid modifying the original list
             Collections.sort(sortedList); // Sort the list in ascending order
             return sortedList;
