@@ -1,9 +1,18 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 
 public class IntegerFrequencyMap {
+    public static Map<Integer, Integer> getFrequencyMap(List<Integer> numbers) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+
+        for (int number : numbers) {
+            frequencyMap.put(number, frequencyMap.getOrDefault(number, 0) + 1);
+        }
+
+        return frequencyMap;
+    }
   public static void main(String[] args) {
         // Example list of integers
         List<Integer> numbers = new ArrayList<>();
