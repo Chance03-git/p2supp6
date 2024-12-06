@@ -3,6 +3,15 @@ import java.util.List;
 import java.util.Random;
 
 public class RandomListGenerator{
+    /**
+     * Generates a list of random integers.
+     * 
+     * @param size The number of integers in the list.
+     * @param min  The minimum value for the random integers.
+     * @param max  The maximum value for the random integers.
+     * @return A list of random integers.
+     * @throws IllegalArgumentException If size is negative or min is greater than max.
+     */
     public static List<Integer> generateRandomList(int size, int min, int max) {
         if (size < 0) {
             throw new IllegalArgumentException("Size must be non-negative.");
