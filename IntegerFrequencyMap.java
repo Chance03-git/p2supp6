@@ -4,6 +4,13 @@ import java.util.List;
 import java.util.Map;
 
 public class IntegerFrequencyMap {
+     /**
+     * Creates a map where each integer in the list is a key and its frequency
+     * (number of occurrences) is the value.
+     * 
+     * @param numbers The list of integers.
+     * @return A map with integers as keys and their frequencies as values.
+     */
     public static Map<Integer, Integer> getFrequencyMap(List<Integer> numbers) {
         Map<Integer, Integer> frequencyMap = new HashMap<>();
 
